@@ -5,7 +5,9 @@ SentiStock leverages social media sentiment analysis and historical stock price 
 - Anupriya
 
 ## Web Dev Team
+- Finna
 
 ## Stock Model Team
+- Finna
 
 ## NLP Model Team
