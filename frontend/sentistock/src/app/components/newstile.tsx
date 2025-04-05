@@ -8,6 +8,16 @@ interface NewsTileProps {
 
 //component setup
 const NewsTile: React.FC<NewsTileProps> = ({title, article_link, img_src_link}) => {
+//Card/ Stock News Tile Component
+//interface setup
+interface NewsTileProps {
+  title: string;
+  article_link: string;
+  img_src_link: string;
+};
+
+//component setup
+const NewsTile: React.FC<NewsTileProps> = ({title, article_link, img_src_link}) => {
   function directClick() {
     window.open(article_link, "_blank"); // use this instead to open in new tab (better UX)
   };
