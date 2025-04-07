@@ -14,46 +14,57 @@ export default function StockAnalysisPage() {
 
       {/* Trending Stocks Section */}
       <h2 className="text-2xl text-gray-700 mb-4">Trending Stocks</h2>
-      <RevealTicker 
-        stock_ticker= "JNVR" 
-        stock_name="Janover Inc." 
-        stock_sector="Technology" 
-        yfinance_link="https://finance.yahoo.com/quote/JNVR/"/>
-      <RevealTicker 
-        stock_ticker= "BJDX" 
-        stock_name="Bluejay Diagnostics, Inc." 
-        stock_sector="Healthcare" 
-        yfinance_link="https://finance.yahoo.com/quote/BJDX/"/>
-      <RevealTicker 
-        stock_ticker= "X" 
-        stock_name="United States Steel Corporation" 
-        stock_sector="Steel manufacturing" 
-        yfinance_link="https://finance.yahoo.com/quote/X/"/>
-      <RevealTicker 
-        stock_ticker= "SUNE" 
-        stock_name="SUNation Energy Inc." 
-        stock_sector="Energy" 
-        yfinance_link="https://finance.yahoo.com/quote/SUNE/"/>
-      <RevealTicker 
-        stock_ticker= "MKDW" 
-        stock_name="MKDWELL Tech Inc." 
-        stock_sector="Automotive" 
-        yfinance_link="https://finance.yahoo.com/quote/MKDW/"/>
-      <RevealTicker 
-        stock_ticker= "CHSN" 
-        stock_name="Chanson International Holding" 
-        stock_sector="Consumer staples" 
-        yfinance_link="https://finance.yahoo.com/quote/CHSN/"/>
-      <RevealTicker 
-        stock_ticker= "MESA" 
-        stock_name="Mesa Air Group, Inc." 
-        stock_sector="Aviation" 
-        yfinance_link="https://finance.yahoo.com/quote/MESA/"/>
-      <RevealTicker 
-        stock_ticker= "OKLO" 
-        stock_name="Oklo Inc." 
-        stock_sector="Technology" 
-        yfinance_link="https://finance.yahoo.com/quote/OKLO/"/>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl mb-12">
+        <RevealTicker 
+          stock_ticker="JNVR" 
+          stock_name="Janover Inc." 
+          stock_sector="Technology" 
+          yfinance_link="https://finance.yahoo.com/quote/JNVR/"
+        />
+        <RevealTicker 
+          stock_ticker="BJDX" 
+          stock_name="Bluejay Diagnostics, Inc." 
+          stock_sector="Healthcare" 
+          yfinance_link="https://finance.yahoo.com/quote/BJDX/"
+        />
+        <RevealTicker 
+          stock_ticker="X" 
+          stock_name="United States Steel Corporation" 
+          stock_sector="Steel manufacturing" 
+          yfinance_link="https://finance.yahoo.com/quote/X/"
+        />
+        <RevealTicker 
+          stock_ticker="SUNE" 
+          stock_name="SUNation Energy Inc." 
+          stock_sector="Energy" 
+          yfinance_link="https://finance.yahoo.com/quote/SUNE/"
+        />
+        <RevealTicker 
+          stock_ticker="MKDW" 
+          stock_name="MKDWELL Tech Inc." 
+          stock_sector="Automotive" 
+          yfinance_link="https://finance.yahoo.com/quote/MKDW/"
+        />
+        <RevealTicker 
+          stock_ticker="CHSN" 
+          stock_name="Chanson International Holding" 
+          stock_sector="Consumer staples" 
+          yfinance_link="https://finance.yahoo.com/quote/CHSN/"
+        />
+        <RevealTicker 
+          stock_ticker="MESA" 
+          stock_name="Mesa Air Group, Inc." 
+          stock_sector="Aviation" 
+          yfinance_link="https://finance.yahoo.com/quote/MESA/"
+        />
+        <RevealTicker 
+          stock_ticker="OKLO" 
+          stock_name="Oklo Inc." 
+          stock_sector="Technology" 
+          yfinance_link="https://finance.yahoo.com/quote/OKLO/"
+        />
+      </div>
 
       {/* Grid Layout of NewsTiles */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl mb-12">
