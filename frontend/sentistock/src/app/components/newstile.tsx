@@ -1,27 +1,60 @@
-//Card/ Stock News Tile Componenet
-export default function NewsTile() {
-  //instead of const, create an interface and define title and articlelink as strings
-  const news_button_info = {
-    title: "Title of Article",
-    articlelink: "https://www.wsj.com/", // Placeholder link
-  };
+'use client';
+import React, { useState } from 'react';
 
-  function directClick() {
-    window.open(news_button_info.articlelink, "_blank"); // use this instead to open in new tab (better UX)
-  }
+interface NewsTileProps {
+  title: string;
+  article_link: string;
+  img_src_link: string;
+  sector?: string;
+}
+
+const NewsTile: React.FC<NewsTileProps> = ({ title, article_link, img_src_link, sector }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openModal = () => setIsOpen(true);
+  const closeModal = () => setIsOpen(false);
 
   return (
-    //feel free to play around with the code in className, this is tailwindCSS and is used to design the button!
-    <button onClick={directClick} className="flex items-center space-x-2 p-2 bg-white shadow-md rounded-lg hover:bg-gray-200 transition">
-      <img
-        src="https://static.vecteezy.com/system/resources/thumbnails/029/128/849/small/square-shape-yellow-green-gradient-3d-rendering-png.png"
-        alt="news button"
-        width={20}
-        height={20}
-      />
-      <span className="text-gray-900 font-medium">{news_button_info.title}</span>
-    </button>
+    <>
+      <div
+        onClick={openModal}
+        className="cursor-pointer bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition-transform duration-300 h-full flex flex-col"
+      >
+        <img src={img_src_link} alt="Stock" className="w-full h-48 object-cover" />
+        <div className="p-4 flex-1 flex flex-col justify-between">
+          <div>
+            <span className="text-sm font-semibold text-[#adc178] uppercase">{sector}</span>
+            <h3 className="text-lg font-bold text-gray-800 mt-2">{title}</h3>
+          </div>
+          <p className="text-sm text-gray-500 mt-2">Click to preview article</p>
+        </div>
+      </div>
+
+      {/* Modal */}
+      {isOpen && (
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-60 flex items-center justify-center">
+          <div className="bg-white p-6 rounded-lg max-w-lg w-full relative">
+            <button
+              onClick={closeModal}
+              className="absolute top-2 right-4 text-gray-500 hover:text-red-500 text-2xl"
+            >
+              &times;
+            </button>
+            <h2 className="text-xl font-bold mb-2">{title}</h2>
+            <p className="text-sm text-gray-600 mb-4">Sector: <strong>{sector || "General"}</strong></p>
+            <a
+              href={article_link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              Read full article →
+            </a>
+          </div>
+        </div>
+      )}
+    </>
   );
-}
-  
-  
+};
+
+export default NewsTile;
