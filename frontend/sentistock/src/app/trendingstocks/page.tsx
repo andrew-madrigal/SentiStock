@@ -3,19 +3,19 @@ import RevealTicker from "../components/revealticker";
 
 export default function StockAnalysisPage() {
   return (
-    <div className="min-h-screen flex flex-col items-center bg-gray-100 px-4 sm:px-8 py-12">
+    <div className="min-h-screen flex flex-col items-center bg-[#F0EAD2] px-4 sm:px-8 py-12 ">
       {/* Title */}
-      <h1 className="text-4xl font-bold text-gray-900 mb-4 mt-4 text-center">Latest Stock News</h1>
+      <h1 className="text-4xl font-bold text-[#3d2e16] mb-4 mt-4 text-center">Latest Stock News</h1>
 
       {/* Description */}
-      <p className="text-xl text-gray-700 mb-12 max-w-6xl">
+      <p className="text-xl text-[#3d2e16] mb-12 max-w-6xl">
         A selection of trending stocks and news articles relevant to recent events. Click on the tiles to learn more about stock news!
       </p>
 
       {/* Trending Stocks Section */}
-      <h2 className="text-2xl text-gray-700 mb-4">Trending Stocks</h2>
+      <h2 className="text-2xl text-[#3d2e16] mb-4 ">Trending Stocks</h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl mb-12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl mb-12 text-[#3d2e16]">
         <RevealTicker 
           stock_ticker="JNVR" 
           stock_name="Janover Inc." 

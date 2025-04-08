@@ -1,6 +1,6 @@
 export default function AboutPage() {
   return (
-    <div className="flex flex-col min-h-screen items-center justify-center px-6 py-12 bg-gray-100">
+    <div className="flex flex-col min-h-screen items-center justify-center px-6 py-12 bg-[#F0EAD2] text-[#3d2e16]">
       <div className="max-w-5xl text-center">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">
           SentiStock: AI-Powered Sentiment & Stock Prediction
@@ -32,7 +32,7 @@ export default function AboutPage() {
                 description: "Users can explore predictions and visual trends seamlessly."
               }
             ].map((step, index) => (
-              <div key={index} className="bg-white shadow-md rounded-xl p-6 text-center">
+              <div key={index} className="bg-[#ADC178] shadow-md rounded-xl p-6 text-center">
                 <h3 className="text-xl font-semibold text-gray-900">{step.title}</h3>
                 <p className="text-gray-700 mt-2">{step.description}</p>
               </div>

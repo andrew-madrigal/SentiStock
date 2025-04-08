@@ -10,10 +10,10 @@ interface revealTickerProps {
   const RevealTicker: React.FC<revealTickerProps> = ({stock_ticker, stock_name, stock_sector, yfinance_link}) =>{
     return(
         <details className="mb-12">
-        <summary className="cursor-pointer font-bold text-xl text-gray-700 hover:text-[#adc178]">
+        <summary className="cursor-pointer font-bold text-xl hover:text-[#adc178]">
           {stock_ticker}
         </summary>
-        <ul className="text-xl text-gray-700 mt-2 marker:text-[#adc178] list-disc pl-5">
+        <ul className="text-xl mt-2 marker:text-[#adc178] list-disc pl-5">
           <li>Stock name: {stock_name}</li>
           <li>Sector: {stock_sector}</li>
           <li>Learn more: <a

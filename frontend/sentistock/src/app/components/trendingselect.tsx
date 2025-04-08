@@ -73,7 +73,7 @@ export default function TrendingSelectClient() {
   return (
     <div className="text-center space-y-6">
       <h1 className="text-4xl font-bold">Trending Stocks Page</h1>
-      <p className="text-lg text-gray-300">
+      <p className="text-lg">
         Select a stock from the dropdown below to view its corresponding prediction.
       </p>
       <Select
