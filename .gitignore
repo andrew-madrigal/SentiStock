@@ -37,3 +37,6 @@ Thumbs.db
 # Temporary files
 *.log
 .cache/
+
+
+.ipynb_checkpoints/
