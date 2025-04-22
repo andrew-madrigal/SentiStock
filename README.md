@@ -11,3 +11,4 @@ SentiStock leverages social media sentiment analysis and historical stock price 
 - Finna
 
 ## NLP Model Team
+- Kailash
